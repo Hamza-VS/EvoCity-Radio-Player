@@ -72,12 +72,13 @@
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(23, 77);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(11, 126);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(35, 36);
             this.axWindowsMediaPlayer1.TabIndex = 1;
             this.axWindowsMediaPlayer1.Visible = false;
+            this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
             // 
             // metroProgressSpinner1
             // 

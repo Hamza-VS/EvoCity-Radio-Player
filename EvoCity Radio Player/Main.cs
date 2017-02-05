@@ -53,7 +53,9 @@ namespace EvoCity_Radio_Player
             }
         }
 
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
 
-        
+        }
     }
 }
