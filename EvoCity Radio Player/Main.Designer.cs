@@ -39,6 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.metroTrackBar1 = new MetroFramework.Controls.MetroTrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -57,7 +58,7 @@
             this.metroToggle1.DisplayStatus = true;
             this.metroToggle1.FontSize = MetroFramework.MetroLinkSize.Small;
             this.metroToggle1.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.metroToggle1.Location = new System.Drawing.Point(89, 77);
+            this.metroToggle1.Location = new System.Drawing.Point(23, 77);
             this.metroToggle1.Name = "metroToggle1";
             this.metroToggle1.Size = new System.Drawing.Size(80, 18);
             this.metroToggle1.Style = MetroFramework.MetroColorStyle.Orange;
@@ -144,17 +145,39 @@
             this.notifyIcon1.Text = "EvoCity Radio Player";
             this.notifyIcon1.Visible = true;
             // 
+            // metroTrackBar1
+            // 
+            this.metroTrackBar1.BackColor = System.Drawing.Color.Transparent;
+            this.metroTrackBar1.CustomBackground = false;
+            this.metroTrackBar1.LargeChange = ((uint)(5u));
+            this.metroTrackBar1.Location = new System.Drawing.Point(167, 77);
+            this.metroTrackBar1.Maximum = 100;
+            this.metroTrackBar1.Minimum = 0;
+            this.metroTrackBar1.MouseWheelBarPartitions = 10;
+            this.metroTrackBar1.Name = "metroTrackBar1";
+            this.metroTrackBar1.Size = new System.Drawing.Size(75, 18);
+            this.metroTrackBar1.SmallChange = ((uint)(1u));
+            this.metroTrackBar1.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTrackBar1.StyleManager = this.msmMain;
+            this.metroTrackBar1.TabIndex = 7;
+            this.metroTrackBar1.Text = "metroTrackBar1";
+            this.metroTrackBar1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTrackBar1.Value = 50;
+            this.metroTrackBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.metroTrackBar1_Scroll);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(265, 166);
+            this.Controls.Add(this.metroTrackBar1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.metroProgressSpinner1);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.metroToggle1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
             this.MaximizeBox = false;
             this.Name = "Main";
@@ -183,6 +206,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private MetroFramework.Controls.MetroTrackBar metroTrackBar1;
     }
 }
 

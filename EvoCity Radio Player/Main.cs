@@ -20,6 +20,9 @@ namespace EvoCity_Radio_Player
         private void Form1_Load(object sender, EventArgs e)
         {
             metroProgressSpinner1.Visible = false;
+            metroTrackBar1.Minimum = 0;
+            metroTrackBar1.Maximum = 100;
+            metroTrackBar1.Value = Properties.Settings.Default.Volume;
         }
 
         private void metroToggle1_CheckedChanged(object sender, EventArgs e)
@@ -55,6 +58,14 @@ namespace EvoCity_Radio_Player
 
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void metroTrackBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            axWindowsMediaPlayer1.settings.volume = metroTrackBar1.Value;
+            Properties.Settings.Default.Volume = metroTrackBar1.Value;
+            Properties.Settings.Default.Save();
 
         }
     }
