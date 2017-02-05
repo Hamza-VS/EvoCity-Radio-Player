@@ -64,9 +64,15 @@ namespace EvoCity_Radio_Player
         private void metroTrackBar1_Scroll(object sender, ScrollEventArgs e)
         {
             axWindowsMediaPlayer1.settings.volume = metroTrackBar1.Value;
-            Properties.Settings.Default.Volume = metroTrackBar1.Value;
-            Properties.Settings.Default.Save();
+
 
         }
+
+        private void Main_Closing(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Volume = metroTrackBar1.Value;
+            Properties.Settings.Default.Save();
+        }
+
     }
 }
